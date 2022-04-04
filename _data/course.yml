@@ -1,7 +1,7 @@
 title: User Experience and User Interface Design
 abbreviation: UX/UI
-iteration: 01/20
-term: Winter 2020
+iteration: 04/22
+term: Spring 2022
 city: Barcelona
 school:
   name: Ironhack
@@ -9,11 +9,11 @@ school:
 nav:
   - HOME
   - topics
-start_date: January 13, 2020
+start_date: April 11, 2022
 days: 45
 repo:
   host: Github
-  url: https://github.com/nevanscott/uxui0120
+  url: https://github.com/nevanscott/uxui0422
 teacher:
   name: Nevan Scott
   url: https://nevanscott.com
