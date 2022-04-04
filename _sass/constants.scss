@@ -3,14 +3,15 @@
   --font-faune: "Faune", system-ui, -apple-system, sans-serif;
   --font-inter: "Inter", system-ui, sans-serif;
   --font-public: "Public Sans", system-ui, sans-serif;
+  --font-system: system-ui, sans-serif;
 
-  --font-body: var(--font-inter);
-  --font-heading: var(--font-inter);
+  --font-body: var(--font-system);
+  --font-heading: var(--font-system);
   --font-display: var(--font-source-serif);
-  --font-interface: var(--font-inter);
-  --font-caption: var(--font-inter);
-  --font-icon: var(--font-inter);
-  --font-label: var(--font-inter);
+  --font-interface: var(--font-system);
+  --font-caption: var(--font-system);
+  --font-icon: var(--font-system);
+  --font-label: var(--font-system);
 
   --transparent: transparent;
   --white: #FFFFFF;
