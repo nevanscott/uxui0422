@@ -1,4 +1,4 @@
-{%- assign lessons = site.lessons | where: "day" , day -%}
+{%- assign lessons = site.lessons | where: "day" , day | sort: "order" -%}
 {% if lessons.size > 0 -%}
   <h2>In Class</h2>
 {%- endif %}
