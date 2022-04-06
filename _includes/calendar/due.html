@@ -1,4 +1,4 @@
-{%- assign lessons = site.lessons | where_exp: "item" , "item.prep.size > 0" | where: "day" , day -%}
+{%- assign lessons = site.lessons | where_exp: "item" , "item.prep.size > 0" | where: "day" , day | sort: "order" -%}
 {%- assign homework = site.homework | where: "due" , day -%}
 {%- assign projects = site.projects | where: "due" , day -%}
 {%- assign due = homework | concat: lessons | concat: projects -%}
@@ -6,16 +6,16 @@
   <h2>Due Today</h2>
 {%- else -%}
 {%- endif %}
-{%- for lesson in lessons -%}
-  {%- for post in lesson.prep -%}
-    {% include post/card.html %}
-  {%- endfor -%}
+{%- for post in projects -%}
+  {%- assign label = "Project Due" -%}
+  {% include post/card.html label=label %}
 {%- endfor -%}
 {%- for post in homework -%}
   {%- assign label = post.format | default:"Homework" -%}
   {% include post/card.html label=label %}
 {%- endfor -%}
-{%- for post in projects -%}
-  {%- assign label = "Project Due" -%}
-  {% include post/card.html label=label %}
+{%- for lesson in lessons -%}
+  {%- for post in lesson.prep -%}
+    {% include post/card.html %}
+  {%- endfor -%}
 {%- endfor -%}

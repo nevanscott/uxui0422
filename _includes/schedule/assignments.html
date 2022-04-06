@@ -1,16 +1,16 @@
 {%- assign tomorrow = day | plus:1 -%}
-{%- assign lessons = site.lessons | where_exp: "item" , "item.prep.size > 0" | where: "day" , tomorrow -%}
+{%- assign lessons = site.lessons | where_exp: "item" , "item.prep.size > 0" | where: "day" , tomorrow | sort: "order" -%}
 {%- assign homework = site.homework | where: "assigned" , day -%}
 {%- assign assigned = homework | concat: lessons -%}
 {% if assigned.size > 0 -%}
   <h2>Assigned Today</h2>
 {%- endif %}
+{%- for post in homework -%}
+  {%- assign label = post.format | default:"Homework" -%}
+  {% include post/preview.html label=label strong=include.strong compact=include.compact %}
+{%- endfor -%}
 {%- for lesson in lessons -%}
   {%- for post in lesson.prep -%}
     {% include post/preview.html strong=include.strong compact=include.compact %}
   {%- endfor -%}
-{%- endfor -%}
-{%- for post in homework -%}
-  {%- assign label = post.format | default:"Homework" -%}
-  {% include post/preview.html label=label strong=include.strong compact=include.compact %}
 {%- endfor -%}
