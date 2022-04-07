@@ -1,8 +1,8 @@
 ---
 title: Add a Feature
 unit: 2
-assigned: 10
-due: 15
+assigned: 6
+due: 10
 topics:
   - Native App
   - User Interface
