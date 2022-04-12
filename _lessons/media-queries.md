@@ -6,6 +6,6 @@ order: 2
 prep:
   - format: Reading
     link: 'https://web.dev/learn/design/media-queries/'
-    title: Flexbox
+    title: Media queries
     source: Learn Responsive Design!
 ---
